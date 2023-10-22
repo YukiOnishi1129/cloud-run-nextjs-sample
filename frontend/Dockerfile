@@ -41,5 +41,9 @@ COPY --from=builder /frontend/.next/static ./.next/static
 
 # USER nextjs
 
+EXPOSE 3000
+
+ENV PORT 3000
+
 # このコマンドがコンテナ起動時に実行される
 CMD ["node", "server.js"]
