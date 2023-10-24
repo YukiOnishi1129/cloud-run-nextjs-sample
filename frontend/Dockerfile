@@ -4,6 +4,7 @@
 # インストール
 FROM node:18-alpine3.17 AS deps
 
+RUN ls
 WORKDIR /frontend
 COPY package.json package-lock.json ./
 RUN npm install --frozen-lockfile
