@@ -3,6 +3,7 @@ services:
   frontend:
     container_name: ${FRONTEND_CONTAINER_NAME}
     build:
+      # クラウド上でDockerfileでコンテナを作る際にcontextは必ずルートディレクトリからになるのでローカル環境でもルートディレクトリをcontextにする
       context: .
       dockerfile: ./frontend/Dockerfile
     tty: true
